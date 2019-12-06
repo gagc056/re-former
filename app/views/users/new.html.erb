@@ -1,2 +1,10 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<h1>New user</h1>
+
+<form accept-charset="UTF-8" action="<%= users_path%>" data-remote="true" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+  <input type="text" name="user[username]">
+  <input type="email" name="user[email]">
+  <input type="password" name="user[password]">
+  <input type="submit" name="user[submit]" value="Create" data-disable-with="Create" />
+</form>
