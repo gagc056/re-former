@@ -11,8 +11,8 @@
 </form>-->
 
 <%= form_with model: @user, class: "nifty_form" do |f| %>
-  <%= f.text_field :username %>
-  <%= f.email_field :email %>
-  <%= f.password_field :password %>
+  <%= f.text_field :username, placeholder: "Your name"%>
+  <%= f.email_field :email, placeholder: "example@example.com"%>
+  <%= f.password_field :password, placeholder: "Your password"%>
   <%= f.submit "Create" %>
 <% end %>
