@@ -1,7 +1,7 @@
 
-<%= form_for:users do |f| %>
+<%= form_for @user, url: users_path(@user) do |f| %>
 <%= f.text_field :username, placeholder: "Your name"%>
 <%= f.email_field :email, placeholder: "example@example.com"%>
 <%= f.password_field :password, placeholder: "Your password"%>
-<%= f.submit "Create" %>
+<%= f.submit "Update" %>
 <% end %>
