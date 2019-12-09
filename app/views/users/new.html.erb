@@ -16,3 +16,19 @@
   <%= f.password_field :password, placeholder: "Your password"%>
   <%= f.submit "Create" %>
 <% end %>
+
+<%= form_for:users do |f| %>
+  <%= f.text_field :username, placeholder: "Your name"%>
+  <%= f.email_field :email, placeholder: "example@example.com"%>
+  <%= f.password_field :password, placeholder: "Your password"%>
+  <%= f.submit "Create" %>
+<% end %>
+
+<%= form_tag('/users') do -%>
+  <%= text_field_tag 'username',placeholder: 'Enter search term...'%>
+  <%= email_field_tag 'email', placeholder: 'Enter search term...'%>
+  <%= password_field_tag 'password', placeholder: 'Enter search term...'%>
+  <%=submit_tag 'Create'%>
+<% end -%>
+
+
